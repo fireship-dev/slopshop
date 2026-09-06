@@ -15,6 +15,9 @@ export function ProviderStatus({ provider }: ProviderStatusProps) {
       </div>
       <span className={`status-pill ${provider.status}`}>{provider.status}</span>
       <span className="cost">${provider.costPerMillionTokens}/M tokens</span>
+      <span className="fallback-rank">
+        fallback #{provider.costPerMillionTokens === 0 ? "panic" : provider.costPerMillionTokens}
+      </span>
     </article>
   );
 }

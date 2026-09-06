@@ -9,3 +9,7 @@ export function estimateCost(usage: TokenUsage) {
 
   return (totalTokens / 1_000_000) * usage.costPerMillionTokens;
 }
+
+export function formatEstimatedCost(cost: number) {
+  return `$${cost.toFixed(4)}`;
+}

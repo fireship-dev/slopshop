@@ -8,7 +8,7 @@ export type GenerationResponse = {
 };
 
 export async function generate(request: RouteRequest): Promise<GenerationResponse> {
-  const decision = chooseProvider(request);
+  const decision = await chooseProvider(request);
 
   return {
     providerId: decision.provider.id,
