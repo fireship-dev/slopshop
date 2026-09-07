@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Activity, DollarSign, Gauge, Router } from "lucide-react";
 import { ProviderStatus } from "./components/ProviderStatus";
+import { PromptReplay } from "./components/PromptReplay";
 import { providers } from "./data/providers";
 import "./styles.css";
 
@@ -55,6 +56,7 @@ function App() {
           </ol>
         </div>
       </section>
+      <PromptReplay />
     </main>
   );
 }
