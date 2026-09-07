@@ -1,5 +1,6 @@
 import { estimateCost } from "../lib/costTracker";
 import { chooseProvider, type RouteRequest } from "../lib/modelRouter";
+import { consumeToken } from "../lib/rateLimiter";
 
 export type GenerationResponse = {
   providerId: string;
@@ -8,6 +9,8 @@ export type GenerationResponse = {
 };
 
 export async function generate(request: RouteRequest): Promise<GenerationResponse> {
+  consumeToken(request.userId ?? "anonymous");
+
   const decision = chooseProvider(request);
 
   return {
