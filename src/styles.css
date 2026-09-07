@@ -156,6 +156,17 @@ h1 {
   color: #d7cfc0;
 }
 
+.budget-panel {
+  margin-top: 18px;
+}
+
+.budget-mood {
+  padding: 20px;
+  color: #d7cfc0;
+  font-size: 1.1rem;
+  font-weight: 750;
+}
+
 @media (max-width: 820px) {
   .app-shell {
     padding: 24px;

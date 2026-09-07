@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Activity, DollarSign, Gauge, Router } from "lucide-react";
+import { HallucinationBudget } from "./components/HallucinationBudget";
 import { ProviderStatus } from "./components/ProviderStatus";
 import { providers } from "./data/providers";
 import "./styles.css";
@@ -55,6 +56,7 @@ function App() {
           </ol>
         </div>
       </section>
+      <HallucinationBudget />
     </main>
   );
 }
