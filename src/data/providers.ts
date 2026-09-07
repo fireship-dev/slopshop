@@ -43,6 +43,14 @@ export const providers: Provider[] = [
     costPerMillionTokens: 3,
   },
   {
+    id: "mistral",
+    name: "Mistral: fast, French, occasionally on strike",
+    status: "online",
+    latencyMs: 380,
+    contextWindow: "128k",
+    costPerMillionTokens: 4,
+  },
+  {
     id: "brads-macbook",
     name: "Brad's MacBook: local llama, fan sounds included",
     status: "offline",

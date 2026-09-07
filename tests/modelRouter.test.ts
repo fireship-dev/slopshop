@@ -17,6 +17,6 @@ describe("chooseProvider", () => {
       preferredProviderId: "gpt",
     });
 
-    expect(decision.provider.id).toBe("gemini");
+    expect(decision.provider.id).toBe("mistral");
   });
 });
