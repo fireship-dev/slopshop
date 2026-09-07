@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Activity, DollarSign, Gauge, Router } from "lucide-react";
 import { ProviderStatus } from "./components/ProviderStatus";
+import { StreamPreview } from "./components/StreamPreview";
 import { providers } from "./data/providers";
 import "./styles.css";
 
@@ -53,6 +54,14 @@ function App() {
             <li>Gemini: massive context, mysterious vibes</li>
             <li>Brad's MacBook: local llama, fan sounds included</li>
           </ol>
+        </div>
+
+        <div className="panel">
+          <div className="panel-header">
+            <h2>Streaming (WIP)</h2>
+            <Activity size={20} />
+          </div>
+          <StreamPreview />
         </div>
       </section>
     </main>
