@@ -1,5 +1,6 @@
 import { estimateCost } from "../lib/costTracker";
 import { chooseProvider, type RouteRequest } from "../lib/modelRouter";
+import { checkRateLimit } from "../lib/rateLimit";
 
 export type GenerationResponse = {
   providerId: string;
@@ -8,6 +9,14 @@ export type GenerationResponse = {
 };
 
 export async function generate(request: RouteRequest): Promise<GenerationResponse> {
+  const limit = checkRateLimit(request.userId);
+
+  if (!limit.allowed) {
+    throw new Error(
+      `Rate limit exceeded. Try again after ${new Date(limit.resetAt).toISOString()}`,
+    );
+  }
+
   const decision = chooseProvider(request);
 
   return {
