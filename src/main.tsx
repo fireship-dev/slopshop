@@ -13,7 +13,7 @@ function App() {
           <p className="eyebrow">Internal AI Ops</p>
           <h1>SlopShop</h1>
           <p className="lede">
-            Route every prompt through the cheapest model that is still awake.
+            Route every prompt to the cheapest model that is still answering.
           </p>
         </div>
         <div className="hero-metrics" aria-label="Routing metrics">
