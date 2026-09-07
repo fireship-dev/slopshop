@@ -7,7 +7,7 @@ describe("resolveTimeout", () => {
   });
 
   it("gives gemini extra time for long context prompts", () => {
-    expect(resolveTimeout({ providerId: "gemini" })).toBe(45_000);
+    expect(resolveTimeout({ providerId: "gemini" })).toBe(60_000);
   });
 
   it("falls back to the default for unknown providers", () => {
