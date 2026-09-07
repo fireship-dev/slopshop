@@ -75,6 +75,19 @@ h1 {
   gap: 18px;
 }
 
+.panic-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 71, 87, 0.38);
+  border-radius: 8px;
+  padding: 13px 16px;
+  background: rgba(255, 71, 87, 0.16);
+  color: #ffb8c0;
+  font-weight: 850;
+}
+
 .panel {
   border: 1px solid rgba(245, 241, 232, 0.14);
   border-radius: 8px;

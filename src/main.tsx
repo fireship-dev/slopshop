@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Activity, DollarSign, Gauge, Router } from "lucide-react";
+import { PanicBanner } from "./components/PanicBanner";
 import { ProviderStatus } from "./components/ProviderStatus";
 import { providers } from "./data/providers";
 import "./styles.css";
@@ -8,6 +9,7 @@ import "./styles.css";
 function App() {
   return (
     <main className="app-shell">
+      <PanicBanner />
       <section className="hero">
         <div>
           <p className="eyebrow">Internal AI Ops</p>
