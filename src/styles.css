@@ -156,6 +156,46 @@ h1 {
   color: #d7cfc0;
 }
 
+.custom-endpoint {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  color: #d7cfc0;
+}
+
+.custom-endpoint-row {
+  display: flex;
+  gap: 8px;
+}
+
+.custom-endpoint input {
+  flex: 1;
+  border: 1px solid rgba(245, 241, 232, 0.18);
+  border-radius: 6px;
+  background: #101010;
+  color: inherit;
+  padding: 8px 10px;
+}
+
+.custom-endpoint button {
+  border: 0;
+  border-radius: 6px;
+  background: #37c191;
+  color: #101010;
+  font-weight: 800;
+  padding: 8px 14px;
+}
+
+.custom-endpoint-error {
+  color: #ff8d9a;
+}
+
+.custom-endpoint-preview {
+  max-height: 240px;
+  overflow: auto;
+  font-size: 0.86rem;
+}
+
 @media (max-width: 820px) {
   .app-shell {
     padding: 24px;
