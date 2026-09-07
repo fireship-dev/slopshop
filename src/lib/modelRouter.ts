@@ -3,6 +3,7 @@ import { providers, type Provider } from "../data/providers";
 export type RouteRequest = {
   prompt: string;
   preferredProviderId?: string;
+  timeoutMs?: number;
 };
 
 export type RouteDecision = {
