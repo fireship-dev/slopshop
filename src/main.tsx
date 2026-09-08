@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Activity, DollarSign, Gauge, Router } from "lucide-react";
 import { ProviderStatus } from "./components/ProviderStatus";
 import { providers } from "./data/providers";
+import { getFallbackProviders } from "./lib/modelRouter";
 import "./styles.css";
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
             <Router size={20} />
           </div>
           <ol className="fallback-chain">
-            {providers.map((provider) => (
+            {getFallbackProviders().map((provider) => (
               <li key={provider.id}>{provider.name}</li>
             ))}
           </ol>
