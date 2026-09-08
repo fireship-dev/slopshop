@@ -18,7 +18,7 @@ function App() {
         </div>
         <div className="hero-metrics" aria-label="Routing metrics">
           <span>
-            <Router size={18} /> 7 providers
+            <Router size={18} /> {providers.length} providers
           </span>
           <span>
             <Gauge size={18} /> 342ms p50
