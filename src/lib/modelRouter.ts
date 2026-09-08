@@ -1,6 +1,7 @@
 import { providers, type Provider } from "../data/providers";
 
 export type RouteRequest = {
+  userId: string;
   prompt: string;
   preferredProviderId?: string;
 };

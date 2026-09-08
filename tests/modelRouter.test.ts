@@ -4,6 +4,7 @@ import { chooseProvider } from "../src/lib/modelRouter";
 describe("chooseProvider", () => {
   it("uses the preferred provider when it is online", () => {
     const decision = chooseProvider({
+      userId: "test-user",
       prompt: "write enterprise yaml",
       preferredProviderId: "claude",
     });
@@ -13,6 +14,7 @@ describe("chooseProvider", () => {
 
   it("falls back to the cheapest online provider", () => {
     const decision = chooseProvider({
+      userId: "test-user",
       prompt: "invent a javascript framework",
       preferredProviderId: "gpt",
     });
