@@ -48,10 +48,9 @@ function App() {
             <Router size={20} />
           </div>
           <ol className="fallback-chain">
-            <li>Claude: expensive but emotionally available</li>
-            <li>GPT: probably knows what JSON is</li>
-            <li>Gemini: massive context, mysterious vibes</li>
-            <li>Brad's MacBook: local llama, fan sounds included</li>
+            {providers.map((provider) => (
+              <li key={provider.id}>{provider.name}</li>
+            ))}
           </ol>
         </div>
       </section>
