@@ -43,6 +43,14 @@ export const providers: Provider[] = [
     costPerMillionTokens: 4,
   },
   {
+    id: "deepseek",
+    name: "DeepSeek: reasoning deeply, billing shallowly",
+    status: "online",
+    latencyMs: 490,
+    contextWindow: "128k",
+    costPerMillionTokens: 0.28,
+  },
+  {
     id: "brads-macbook",
     name: "Brad's MacBook: local llama, fan sounds included",
     status: "offline",

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Activity, DollarSign, Gauge, Router } from "lucide-react";
 import { ProviderStatus } from "./components/ProviderStatus";
 import { providers } from "./data/providers";
+import { getFallbackProviders } from "./lib/modelRouter";
 import "./styles.css";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         </div>
         <div className="hero-metrics" aria-label="Routing metrics">
           <span>
-            <Router size={18} /> 7 providers
+            <Router size={18} /> {providers.length} providers
           </span>
           <span>
             <Gauge size={18} /> 342ms p50
@@ -48,10 +49,9 @@ function App() {
             <Router size={20} />
           </div>
           <ol className="fallback-chain">
-            <li>Claude: expensive but emotionally available</li>
-            <li>GPT: probably knows what JSON is</li>
-            <li>Gemini: massive context, mysterious vibes</li>
-            <li>Brad's MacBook: local llama, fan sounds included</li>
+            {getFallbackProviders().map((provider) => (
+              <li key={provider.id}>{provider.name}</li>
+            ))}
           </ol>
         </div>
       </section>

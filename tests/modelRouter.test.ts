@@ -11,12 +11,21 @@ describe("chooseProvider", () => {
     expect(decision.provider.id).toBe("claude");
   });
 
+  it("routes requests to DeepSeek", () => {
+    const decision = chooseProvider({
+      prompt: "invent a javascript framework",
+      preferredProviderId: "deepseek",
+    });
+
+    expect(decision.provider.id).toBe("deepseek");
+  });
+
   it("falls back to the cheapest online provider", () => {
     const decision = chooseProvider({
       prompt: "invent a javascript framework",
       preferredProviderId: "gpt",
     });
 
-    expect(decision.provider.id).toBe("mistral");
+    expect(decision.provider.id).toBe("deepseek");
   });
 });
